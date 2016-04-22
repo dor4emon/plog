@@ -116,36 +116,42 @@ struct plog {
     #if DEBUG
     
     // Message
-    static func m(message: String = "", fileName: String = #file, function: String = #function, lineNumber: Int = #line) {
+    static func m(message: String = "", absoluteFileName: String = #file, function: String = #function, lineNumber: Int = #line) {
         
-        print(customColor(red: 0, green: 255, blue: 128, object: "💬 \(fileName.lastPathComponent): ") +
+        let fileName = absoluteFileName.lastPathComponent
+        
+        print(customColor(red: 0, green: 255, blue: 128, object: "💬 \(fileName): ") +
                 purple("\(function) ") +
                 pink("\(lineNumber): ") +
                 lightGrey("\(message)"))
     }
     
     // Type Any
-    static func a<T>(any: T, fileName: String = #file, function: String = #function, lineNumber: Int = #line) {
+    static func a<T>(any: T, absoluteFileName: String = #file, function: String = #function, lineNumber: Int = #line) {
         
-        print(customColor(red: 0, green: 255, blue: 128, object: "🌟 \(fileName.lastPathComponent): ") +
+        let fileName = absoluteFileName.lastPathComponent
+        
+        print(customColor(red: 0, green: 255, blue: 128, object: "🌟 \(fileName): ") +
             purple("\(function) ") +
             pink("\(lineNumber): ") +
             lightGrey("\(any)"))
     }
     
     // Type NSError
-    static func e(error: NSError, fileName: String = #file, function: String = #function, lineNumber: Int = #line) {
+    static func e(error: NSError, absoluteFileName: String = #file, function: String = #function, lineNumber: Int = #line) {
         
-        print(red("❗️ \(fileName.lastPathComponent): \(function) \(lineNumber): \(error.domain), \(error.description)"))
+        let fileName = absoluteFileName.lastPathComponent
+        
+        print(red("❗️ \(fileName): \(function) \(lineNumber): \(error.domain), \(error.description)"))
     }
     
     #else
     
-    static func m(message: String = "", fileName: String = #file, function: String = #function, lineNumber: Int = #line) { }
+    static func m(message: String = "", absoluteFileName: String = #file, function: String = #function, lineNumber: Int = #line) { }
     
-    static func a<T>(object: T, fileName: String = #file, function: String = #function, lineNumber: Int = #line) { }
+    static func a<T>(object: T, absoluteFileName: String = #file, function: String = #function, lineNumber: Int = #line) { }
     
-    static func e(error: NSError, fileName: String = #file, function: String = #function, lineNumber: Int = #line) { }
+    static func e(error: NSError, absoluteFileName: String = #file, function: String = #function, lineNumber: Int = #line) { }
     
     #endif
 
