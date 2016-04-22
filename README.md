@@ -11,25 +11,29 @@ Then add [plog.swift] (https://github.com/dor4emon/plog/blob/master/plog.swift) 
 ## Usage
 
 To log a message to the console:
-
-    plog.m("message")
+```swift
+plog.m("message")
+```
 
 where the argument is provided as a `String`.
 
 You do not have to provide a message if you wish:
-
-    plog.m()
+```swift
+plog.m()
+```
 
 which will just print the file name, function name and line number of where this statement is.
 
 To log a variable of type Any:
-
-    plog.a(someAny)
+```swift
+plog.a(someAny)
+```
 
 where `someAny` can be any variable of type Any.
 
 To log an NSError to the console:
+```swift
+plog.e(error)
+```
 
-    plog.e(error)
-
-where `error` is an instance of NSError. This will provide you with the `error.domain` and `error.description` by default.
+where `error` is an instance of `NSError`. This will provide you with the `error.domain` and `error.description` by default.
