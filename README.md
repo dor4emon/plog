@@ -50,7 +50,7 @@ Using `plog.m(_:)` as an example:
 
 ```swift
 print(green("💬 \(NSDate()) ") +
-        orange("\(fileName.lastPathComponent): ") +
+        orange("\(fileName): ") +
         purple("\(function) ") +
         pink("\(lineNumber): ") +
         lightGrey("\(message)"))
@@ -63,7 +63,7 @@ If you do not want to log a certain component, simply remove it.
 Also, each log component is displayed in a different color for clarity. You may customize these colors to anything you want, using either the preset colors defined or by specifying your own RGB color. 
 
 ```swift
-print(green("💬 \(fileName.lastPathComponent): ") +
+print(green("💬 \(fileName): ") +
         yellow("\(function) ") +
         pink("\(lineNumber): ") +
         lightGrey("\(message)"))
@@ -72,7 +72,7 @@ print(green("💬 \(fileName.lastPathComponent): ") +
 To use a custom RGB color for a component, use the `customColor(red:green:blue:object)` function:
 
 ```swift
-print(customColor(red: 0, green: 255, blue: 128, object: "💬 \(fileName.lastPathComponent): ") +
+print(customColor(red: 0, green: 255, blue: 128, object: "💬 \(fileName): ") +
         purple("\(function) ") +
         pink("\(lineNumber): ") +
         lightGrey("\(message)"))
