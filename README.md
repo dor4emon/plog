@@ -42,6 +42,8 @@ where `error` is an instance of `NSError`. This will provide you with the `error
 
 ## Customization
 
+#### Log components
+
 Each log function is fully customizable to display whatever information you like. By default, all log functions print out the file name, function name and line number, followed by the log message, if specified. You may add additional components if you wish. For example, you might want to add the date and time at which the log message was recorded. 
 
 Using `plog.m(_:)` as an example:
@@ -55,6 +57,8 @@ print(green("💬 \(NSDate()) ") +
 ```
 
 If you do not want to log a certain component, simply remove it. 
+
+#### Colors
 
 Also, each log component is displayed in a different color for clarity. You may customize these colors to anything you want, using either the preset colors defined or by specifying your own RGB color. 
 
