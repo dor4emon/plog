@@ -6,6 +6,8 @@ plog, which stands for "pretty log", is a logging tool for Swift that allows you
 
 You need to install the [XcodeColors plug-in] (https://github.com/robbiehanson/XcodeColors#xcodecolors-installation-instructions-for-xcode-4-5-6--7) first.
 
+The log functions are only enabled when running in `Debug` configuration. Make sure you have set a `-DDEBUG` flag in **Build Settings -> Swift Compiler - Custom Flags** as described [here] (http://stackoverflow.com/questions/24111854/in-absence-of-preprocessor-macros-is-there-a-way-to-define-practical-scheme-spe#).
+
 Then add [plog.swift] (https://github.com/dor4emon/plog/blob/master/plog.swift) anywhere in your project and the log functions will be available.
 
 ## Usage
