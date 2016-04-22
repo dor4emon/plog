@@ -33,7 +33,7 @@ plog.a(someAny)
 
 where `someAny` can be any variable of type Any.
 
-To log an NSError to the console:
+To log an `NSError` to the console:
 ```swift
 plog.e(error)
 ```
