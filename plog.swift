@@ -154,7 +154,6 @@ struct plog {
     static func e(error: NSError, absoluteFileName: String = #file, function: String = #function, lineNumber: Int = #line) { }
     
     #endif
-
 }
 
 extension String {
