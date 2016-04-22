@@ -47,7 +47,7 @@ Each log function is fully customizable to display whatever information you like
 Using `plog.m(_:)` as an example:
 
 ```swift
-print( green("💬 \(NSDate()) ") +
+print(green("💬 \(NSDate()) ") +
         orange("\(fileName.lastPathComponent): ") +
         purple("\(function) ") +
         pink("\(lineNumber): ") +
